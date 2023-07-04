@@ -7,15 +7,16 @@ const carinfor_obj = [
   ];
   
   let outHtml = `<table>`;
-  for (let car_hashmap of carinfor_obj) {
+  for (let car_hashmap of carinfor_obj) {   // 각 차량의 정보를 콘솔에 출력
     console.log(`YEAR: ${car_hashmap.YEAR}, CAR_NAME: ${car_hashmap.CAR_NAME}, CAR_INFOR_ID: ${car_hashmap.CAR_INFOR_ID}, COMPANY_ID: ${car_hashmap.COMPANY_ID}`);
+     // 동적으로 생성된 HTML 테이블 행을 추가
     outHtml += `<tr><td>${car_hashmap.YEAR}</td><td>${car_hashmap.CAR_NAME}</td><td>${car_hashmap.CAR_INFOR_ID}</td><td>${car_hashmap.COMPANY_ID}</td></tr>`;
   }
   outHtml += `</table>`;
   
   console.log(outHtml);
   
-  // Find the DOM element with the id "carTableBody" and add the dynamically generated HTML
+ // "carTableBody"라는 id를 가진 DOM 요소를 찾아서 동적으로 생성된 HTML을 추가
   let carTableBody = document.querySelector('#carTableBody');
   carTableBody.innerHTML = outHtml;
   
