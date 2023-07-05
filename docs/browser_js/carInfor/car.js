@@ -6,6 +6,7 @@ const carinfor_obj = [
     {"YEAR":"2020","CAR_NAME":"Camry","CAR_INFOR_ID":"CI005","COMPANY_ID":"C005"}
   ];
   
+
   let outHtml = `<table>`; //테이블열기
   for (let car_hashmap of carinfor_obj) {   
     // 각 자동차의 정보를 콘솔에 출력(올바르게 액세스하고 있는지 확인용)
@@ -18,6 +19,6 @@ const carinfor_obj = [
   console.log(outHtml); // outHtml 변수에 저장된 동적으로 생성된 HTML 코드를 콘솔에 기록
   
  // "carTableBody"라는 id를 가진 DOM 요소를 찾아서 동적으로 생성된 HTML을 추가
-  let carTableBody = document.querySelector('#carTableBody'); // list.html에서 이 id 넣음 <tbody id="carTableBody"> 
+  let carTableBody = document.querySelector('#carTableBody'); // list.html에서 이 id 넣음 <tbody id="carTableBody"> !!
   carTableBody.innerHTML = outHtml; //outHtml 변수에 저장된 동적으로 생성된 HTML이 선택된 <tbody> 요소의 내부 HTML로 할당됨
   
